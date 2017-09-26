@@ -1,5 +1,10 @@
+  (add-to-list 'package-archives
+              '("melpa" . "http://melpa.org/packages/"))
 (set-default-font "-outline-Axure Handwriting-bold-normal-normal-sans-21-*-*-*-p-*-iso8859-1")
-      (define-key global-map [C-return] 'set-mark-command)
+(define-key global-map [C-return] 'set-mark-command)
+(add-to-list 'load-path "~/.emacs.d/elpa/neotree-20170522.758")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
   ;;(send-mail-function (quote smtpmail-send-it))
  ;; (smtp mail-smtp-server "smtp.qq.com")
  ;; (smtp mail-smtp-service 25)
