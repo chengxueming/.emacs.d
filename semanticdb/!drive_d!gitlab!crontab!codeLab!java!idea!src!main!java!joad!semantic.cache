@@ -1,0 +1,39 @@
+;; Object joad/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "joad/"
+  :tables
+  (list
+    (semanticdb-table "JodaTest.java"
+      :major-mode 'jde-mode
+      :tags 
+        '( ("joad" package nil nil [1 14])
+            ("java.util.Calendar" include nil nil [16 42])
+            ("java.util.Date" include nil nil [43 65])
+            ("java.util.Locale" include nil nil [66 90])
+            ("org.joda.time.DateTime" include nil nil [91 121])
+            ("org.joda.time.Days" include nil nil [122 148])
+            ("org.joda.time.LocalDate" include nil nil [149 180])
+            ("org.joda.time.format.DateTimeFormat" include nil nil [181 224])
+            ("org.joda.time.format.DateTimeFormatter" include nil nil [225 271])
+            ("JodaTest" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [326 339]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [302 3310]))                  
+                :type "class")
+                nil [273 3312]))          
+      :file "JodaTest.java"
+      :pointmax 3312
+      :fsize 3628
+      :lastmodtime '(22955 43218 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_d!gitlab!crontab!codeLab!java!idea!src!main!java!joad!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

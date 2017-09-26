@@ -1,0 +1,156 @@
+;; Object impl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "impl/"
+  :tables
+  (list
+    (semanticdb-table "PocketYueduDao.java"
+      :major-mode 'jde-mode
+      :tags 
+        '( ("com.kingsoft.dao.impl" package nil nil [1 31])
+            ("com.fasterxml.jackson.core.type.TypeReference" include nil nil [33 86])
+            ("com.fasterxml.jackson.databind.ObjectMapper" include nil nil [87 138])
+            ("com.kingsoft.constant.Constants" include nil nil [139 178])
+            ("com.kingsoft.dao.IPocketYueduDao" include nil nil [179 219])
+            ("com.kingsoft.pojo.*" include nil nil [220 247])
+            ("com.kingsoft.pojo.mapper.CoinUserAppMapper" include nil nil [248 298])
+            ("com.kingsoft.pojo.mapper.PocketYueduBookChapterMapper" include nil nil [299 360])
+            ("com.kingsoft.pojo.mapper.PocketYueduUserMapper" include nil nil [361 415])
+            ("com.kingsoft.pojo.vo.PocketYueduReadInfoVO" include nil nil [416 466])
+            ("com.kingsoft.pojo.vo.PocketYueduUserBuyInfoVO" include nil nil [467 520])
+            ("com.kingsoft.service.impl.RedisService" include nil nil [521 567])
+            ("com.kingsoft.utils.TimeUtils" include nil nil [568 604])
+            ("org.mybatis.spring.support.SqlSessionDaoSupport" include nil nil [605 660])
+            ("org.springframework.beans.factory.annotation.Autowired" include nil nil [661 723])
+            ("java.lang.reflect.Array" include nil nil [725 756])
+            ("java.sql.Date" include nil nil [757 778])
+            ("java.text.ParsePosition" include nil nil [779 810])
+            ("java.text.SimpleDateFormat" include nil nil [811 845])
+            ("java.util.ArrayList" include nil nil [846 873])
+            ("java.util.HashMap" include nil nil [874 899])
+            ("java.util.List" include nil nil [900 922])
+            ("PocketYueduDao" type
+               (:typemodifiers ("public")
+                :interfaces ("IPocketYueduDao")
+                :superclasses "SqlSessionDaoSupport"
+                :members 
+                  ( ("BOOK_PRE" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1063 1152])
+                    ("CHAPTER_PRE" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1157 1256])
+                    ("BUY_INFO_PRE" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1261 1361])
+                    ("READ_INFO_PRE" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1366 1460])
+                    ("BOOK_LIST_PRE" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1465 1563])
+                    ("NORMAL" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1568 1604])
+                    ("DELETE" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1609 1645])
+                    ("redisService" variable
+                       (:typemodifiers ("private")
+                        :type "RedisService")
+                        (reparse-symbol class_member_declaration) [1666 1700])
+                    ("objectMapper" variable
+                       (:typemodifiers ("private")
+                        :type "ObjectMapper")
+                        (reparse-symbol class_member_declaration) [1721 1755])
+                    ("getBookByBookId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("bookId" variable (:type "int") (reparse-symbol formal_parameters) [1816 1826]))                          
+                        :type "PocketYueduBook")
+                        (reparse-symbol class_member_declaration) [1777 2063])
+                    ("getAllChapterOfBook" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("bookId" variable (:type "int") (reparse-symbol formal_parameters) [2139 2149]))                          )
+                        (reparse-symbol class_member_declaration) [2119 2583])
+                    ("getChapterContentByChapterId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("chapterId" variable (:type "int") (reparse-symbol formal_parameters) [2671 2684]))                          
+                        :type "PocketYueduBookChapterWithBLOBs")
+                        (reparse-symbol class_member_declaration) [2603 3031])
+                    ("getDBChapterContentByChapterId" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("chapterId" variable (:type "int") (reparse-symbol formal_parameters) [3108 3121]))                          
+                        :type "PocketYueduBookChapterWithBLOBs")
+                        (reparse-symbol class_member_declaration) [3037 3399])
+                    ("getChapterByChapterId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("chapterId" variable (:type "int") (reparse-symbol formal_parameters) [3471 3484]))                          
+                        :type "PocketYueduBookChapter")
+                        (reparse-symbol class_member_declaration) [3419 3753])
+                    ("getUserBuyList" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("openId" variable (:type "String") (reparse-symbol formal_parameters) [3826 3839])
+                            ("from" variable (:type "String") (reparse-symbol formal_parameters) [3841 3852])
+                            ("to" variable (:type "String") (reparse-symbol formal_parameters) [3854 3863]))                          )
+                        (reparse-symbol class_member_declaration) [3811 4379])
+                    ("getUserBuyList" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("openId" variable (:type "String") (reparse-symbol formal_parameters) [4452 4465]))                          )
+                        (reparse-symbol class_member_declaration) [4437 4944])
+                    ("getUserReadList" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("openId" variable (:type "String") (reparse-symbol formal_parameters) [4995 5008]))                          )
+                        (reparse-symbol class_member_declaration) [4979 5263])
+                    ("inserUserReadInfo" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("openId" variable (:type "String") (reparse-symbol formal_parameters) [5316 5329])
+                            ("listId" variable (:type "int") (reparse-symbol formal_parameters) [5331 5341])
+                            ("chapterId" variable (:type "int") (reparse-symbol formal_parameters) [5343 5356]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [5283 6381])
+                    ("getLastBeginSaleActivity" function (:constructor-flag t) (reparse-symbol class_member_declaration) [6432 6688])
+                    ("getDBLastBeginSaleActivity" function (:constructor-flag t) (reparse-symbol class_member_declaration) [6725 7377])
+                    ("getActivityByListId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("listId" variable (:type "int") (reparse-symbol formal_parameters) [7430 7440]))                          
+                        :type "PocketYueduBookList")
+                        (reparse-symbol class_member_declaration) [7383 7763])
+                    ("dealActivity" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("bookList" variable (:type "PocketYueduBookList") (reparse-symbol formal_parameters) [7814 7842]))                          )
+                        (reparse-symbol class_member_declaration) [7801 9055])
+                    ("userIsBuy" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("openId" variable (:type "String") (reparse-symbol formal_parameters) [9100 9113])
+                            ("listId" variable (:type "int") (reparse-symbol formal_parameters) [9115 9125])
+                            ("bookId" variable (:type "int") (reparse-symbol formal_parameters) [9127 9137]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [9075 9707]))                  
+                :type "class")
+                nil [973 9709]))          
+      :file "PocketYueduDao.java"
+      :pointmax 9710
+      :fsize 9911
+      :lastmodtime '(22976 57703 0 0)
+      :unmatched-syntax '((GT 7799 . 7800) (COMMA 7791 . 7792) (PRIVATE 7769 . 7776) (LT 7784 . 7785) (GT 6723 . 6724) (COMMA 6715 . 6716) (PUBLIC 6694 . 6700) (LT 6708 . 6709) (GT 6430 . 6431) (COMMA 6422 . 6423) (IDENTIFIER 6387 . 6396) (PUBLIC 6401 . 6407) (LT 6415 . 6416) (GT 4977 . 4978) (PUBLIC 4950 . 4956) (LT 4961 . 4962) (GT 4435 . 4436) (IDENTIFIER 4385 . 4394) (PUBLIC 4399 . 4405) (LT 4410 . 4411) (GT 3809 . 3810) (IDENTIFIER 3759 . 3768) (PUBLIC 3773 . 3779) (LT 3784 . 3785) (GT 2117 . 2118) (IDENTIFIER 2069 . 2078) (PUBLIC 2083 . 2089) (LT 2094 . 2095))))
+  :file "!drive_d!service.iciba.com_task!src!main!java!com!kingsoft!dao!impl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,519 @@
+;; Object impl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "impl/"
+  :tables
+  (list
+    (semanticdb-table "CourseServiceImpl.java"
+      :major-mode 'jde-mode
+      :tags 
+        '( ("com.kingsoft.service.impl" package nil nil [1 35])
+            ("com.fasterxml.jackson.core.JsonProcessingException" include nil nil [37 95])
+            ("com.fasterxml.jackson.core.type.TypeReference" include nil nil [96 149])
+            ("com.fasterxml.jackson.databind.ObjectMapper" include nil nil [150 201])
+            ("com.google.common.base.Preconditions" include nil nil [202 246])
+            ("com.google.common.collect.Lists" include nil nil [247 286])
+            ("com.google.common.collect.Maps" include nil nil [287 325])
+            ("com.google.common.collect.Sets" include nil nil [326 364])
+            ("com.kingsoft.aop.SuperVip2017" include nil nil [365 402])
+            ("com.kingsoft.constants.Constants" include nil nil [403 443])
+            ("com.kingsoft.constants.CourseCategory" include nil nil [444 489])
+            ("com.kingsoft.constants.CourseType" include nil nil [490 531])
+            ("com.kingsoft.dao.*" include nil nil [533 559])
+            ("com.kingsoft.pojo.*" include nil nil [560 587])
+            ("com.kingsoft.pojo.vo.*" include nil nil [588 618])
+            ("com.kingsoft.service.BuyStateService" include nil nil [619 663])
+            ("com.kingsoft.service.CourseService" include nil nil [664 706])
+            ("com.kingsoft.utils.NumerUtil" include nil nil [707 743])
+            ("com.kingsoft.utils.RedisTemplate" include nil nil [744 784])
+            ("com.kingsoft.utils.Utils" include nil nil [785 817])
+            ("com.kingsoft.utils.VersionCompare" include nil nil [818 859])
+            ("org.apache.commons.lang.StringUtils" include nil nil [860 903])
+            ("org.slf4j.Logger" include nil nil [904 928])
+            ("org.slf4j.LoggerFactory" include nil nil [929 960])
+            ("org.springframework.beans.factory.annotation.Autowired" include nil nil [961 1023])
+            ("org.springframework.util.CollectionUtils" include nil nil [1024 1072])
+            ("javax.annotation.Resource" include nil nil [1074 1107])
+            ("javax.servlet.http.HttpServletRequest" include nil nil [1108 1153])
+            ("java.io.IOException" include nil nil [1154 1181])
+            ("java.math.BigDecimal" include nil nil [1182 1210])
+            ("java.text.DecimalFormat" include nil nil [1211 1242])
+            ("java.text.NumberFormat" include nil nil [1243 1273])
+            ("java.util.*" include nil nil [1274 1293])
+            ("java.util.stream.Collectors" include nil nil [1294 1329])
+            ("CourseServiceImpl" type
+               (:typemodifiers ("public")
+                :interfaces ("CourseService")
+                :superclasses "ParameterServiceImpl"
+                :members 
+                  ( ("LOGGER" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [1644 1730])
+                    ("getTabNameByLabel" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("client" variable (:type "int") (reparse-symbol formal_parameters) [3177 3187])
+                            ("" variable (:type "labels") (reparse-symbol formal_parameters) [3203 3209]))                          )
+                        (reparse-symbol class_member_declaration) [3159 3950])
+                    ("getUserCourseInfoByCourseId" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [4155 4162])
+                            ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [4164 4176])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [4178 4188]))                          )
+                        (reparse-symbol class_member_declaration) [4127 4943])
+                    ("setPlayRecord" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [4988 4995])
+                            ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [4997 5009])
+                            ("videoId" variable (:type "int") (reparse-symbol formal_parameters) [5011 5022])
+                            ("length" variable (:type "int") (reparse-symbol formal_parameters) [5024 5034]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [4963 5128])
+                    ("buyCourse" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [5169 5176])
+                            ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [5178 5190])
+                            ("buyType" variable (:type "int") (reparse-symbol formal_parameters) [5192 5203])
+                            ("showType" variable (:type "int") (reparse-symbol formal_parameters) [5205 5217]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5148 5954])
+                    ("getHomeTabList" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("client" variable (:type "int") (reparse-symbol formal_parameters) [6012 6022])
+                            ("num" variable (:type "int") (reparse-symbol formal_parameters) [6024 6031])
+                            ("uid" variable (:type "int") (reparse-symbol formal_parameters) [6033 6040]))                          )
+                        (reparse-symbol class_member_declaration) [5997 7802])
+                    ("getCourseListVOByLabels" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "labels") (reparse-symbol formal_parameters) [7872 7878])
+                            ("num" variable (:type "int") (reparse-symbol formal_parameters) [7880 7887])
+                            ("page" variable (:type "int") (reparse-symbol formal_parameters) [7889 7897])
+                            ("uid" variable (:type "int") (reparse-symbol formal_parameters) [7899 7906]))                          )
+                        (reparse-symbol class_member_declaration) [7834 7988])
+                    ("getCourseListVOByLabels" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "labels") (reparse-symbol formal_parameters) [8194 8200])
+                            ("num" variable (:type "int") (reparse-symbol formal_parameters) [8202 8209])
+                            ("page" variable (:type "int") (reparse-symbol formal_parameters) [8211 8219])
+                            ("uid" variable (:type "int") (reparse-symbol formal_parameters) [8221 8228])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [8230 8240]))                          )
+                        (reparse-symbol class_member_declaration) [8156 11423])
+                    ("getCourseListVOByLabels" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "labels") (reparse-symbol formal_parameters) [11498 11504])
+                            ("num" variable (:type "int") (reparse-symbol formal_parameters) [11506 11513])
+                            ("page" variable (:type "int") (reparse-symbol formal_parameters) [11515 11523])
+                            ("row" variable (:type "int") (reparse-symbol formal_parameters) [11525 11532])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [11534 11544])
+                            ("uid" variable (:type "int") (reparse-symbol formal_parameters) [11546 11553]))                          
+                        :type "TabListVO")
+                        (reparse-symbol class_member_declaration) [11443 12403])
+                    ("getHeadImage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("client" variable (:type "int") (reparse-symbol formal_parameters) [12461 12471]))                          )
+                        (reparse-symbol class_member_declaration) [12448 12525])
+                    ("getCategory" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("version" variable (:type "int") (reparse-symbol formal_parameters) [12581 12592]))                          )
+                        (reparse-symbol class_member_declaration) [12569 13737])
+                    ("getCourseListWithActivity" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [13810 13836])
+                            ("page" variable (:type "int") (reparse-symbol formal_parameters) [13838 13846])
+                            ("size" variable (:type "int") (reparse-symbol formal_parameters) [13848 13856])
+                            ("catId" variable (:type "int") (reparse-symbol formal_parameters) [13858 13867])
+                            ("type" variable (:type "String") (reparse-symbol formal_parameters) [13869 13880]))                          )
+                        (reparse-symbol class_member_declaration) [13784 14420])
+                    ("getCourseList" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("page" variable (:type "int") (reparse-symbol formal_parameters) [14468 14476])
+                            ("size" variable (:type "int") (reparse-symbol formal_parameters) [14478 14486])
+                            ("catId" variable (:type "int") (reparse-symbol formal_parameters) [14488 14497])
+                            ("type" variable (:type "String") (reparse-symbol formal_parameters) [14499 14510]))                          )
+                        (reparse-symbol class_member_declaration) [14454 15698])
+                    ("getCourseListV2" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("page" variable (:type "int") (reparse-symbol formal_parameters) [15771 15779])
+                            ("size" variable (:type "int") (reparse-symbol formal_parameters) [15781 15789])
+                            ("uid" variable (:type "int") (reparse-symbol formal_parameters) [15791 15798]))                          )
+                        (reparse-symbol class_member_declaration) [15755 16747])
+                    ("typeIdToName" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("catId" variable (:type "int") (reparse-symbol formal_parameters) [16781 16790])
+                            ("typeId" variable (:type "int") (reparse-symbol formal_parameters) [16792 16802]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [16753 16873])
+                    ("getCourseList" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("page" variable (:type "int") (reparse-symbol formal_parameters) [16929 16937])
+                            ("size" variable (:type "int") (reparse-symbol formal_parameters) [16939 16947])
+                            ("catId" variable (:type "int") (reparse-symbol formal_parameters) [16949 16958])
+                            ("showType" variable (:type "int") (reparse-symbol formal_parameters) [16960 16972])
+                            ("uid" variable (:type "int") (reparse-symbol formal_parameters) [16974 16981]))                          )
+                        (reparse-symbol class_member_declaration) [16915 17058])
+                    ("getCourse" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [17105 17117]))                          
+                        :type "CourseVO")
+                        (reparse-symbol class_member_declaration) [17079 18211])
+                    ("getCourseListByOrgIdWithExcludedIds" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("orgId" variable (:type "int") (reparse-symbol formal_parameters) [18292 18301])
+                            ("" variable (:type "excludedIds") (reparse-symbol formal_parameters) [18317 18328]))                          )
+                        (reparse-symbol class_member_declaration) [18256 18610])
+                    ("getActivityList" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("client" variable (:type "int") (reparse-symbol formal_parameters) [18676 18686])
+                            ("catId" variable (:type "int") (reparse-symbol formal_parameters) [18688 18697])
+                            ("version" variable (:type "String") (reparse-symbol formal_parameters) [18699 18713]))                          )
+                        (reparse-symbol class_member_declaration) [18660 21428])
+                    ("updateJumpUrl" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("anActivityList" variable (:type "TbCourseActivity") (reparse-symbol formal_parameters) [21461 21492])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [21494 21504])
+                            ("jumpUrl" variable (:type "String") (reparse-symbol formal_parameters) [21506 21520]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [21434 22447])
+                    ("filterForPc" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("anActivityList" variable (:type "TbCourseActivity") (reparse-symbol formal_parameters) [22481 22512])
+                            ("version" variable (:type "String") (reparse-symbol formal_parameters) [22514 22528]))                          
+                        :type "Boolean")
+                        (reparse-symbol class_member_declaration) [22453 22764])
+                    ("versionFilter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("client" variable (:type "int") (reparse-symbol formal_parameters) [22797 22807])
+                            ("" variable (:type "list") (reparse-symbol formal_parameters) [22832 22836])
+                            ("version" variable (:type "String") (reparse-symbol formal_parameters) [22838 22852]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [22770 23741])
+                    ("luboVersionFilter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("" variable (:type "list") (reparse-symbol formal_parameters) [23821 23825])
+                            ("version" variable (:type "String") (reparse-symbol formal_parameters) [23827 23841])
+                            ("clientStr" variable (:type "String") (reparse-symbol formal_parameters) [23843 23859]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [23767 24553])
+                    ("treatTbCourseHead" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("tbCourseHead" variable (:type "TbCourseHead") (reparse-symbol formal_parameters) [24590 24615])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [24617 24627]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24559 26599])
+                    ("activityHeadWebUrl" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("tbCourseHead" variable (:type "TbCourseHead") (reparse-symbol formal_parameters) [26753 26778])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [26780 26790]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [26721 27747])
+                    ("getPackageV2" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [27807 27833]))                          )
+                        (reparse-symbol class_member_declaration) [27794 30230])
+                    ("getUserCourseList" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [30298 30305])
+                            ("showType" variable (:type "int") (reparse-symbol formal_parameters) [30307 30319])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [30321 30331]))                          )
+                        (reparse-symbol class_member_declaration) [30280 31807])
+                    ("getUserCourseListByCourseIds" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [32014 32021])
+                            ("courseIds" variable (:type "String") (reparse-symbol formal_parameters) [32023 32039])
+                            ("exclude" variable (:type "boolean") (reparse-symbol formal_parameters) [32041 32056])
+                            ("showType" variable (:type "int") (reparse-symbol formal_parameters) [32058 32070])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [32072 32082]))                          )
+                        (reparse-symbol class_member_declaration) [31985 33113])
+                    ("getOneByUidCourseId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [33173 33180])
+                            ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [33182 33194]))                          
+                        :type "TbUserCourse")
+                        (reparse-symbol class_member_declaration) [33133 33268])
+                    ("queryUserCourseListFromDB" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [33331 33338])
+                            ("showType" variable (:type "int") (reparse-symbol formal_parameters) [33340 33352])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [33354 33364]))                          )
+                        (reparse-symbol class_member_declaration) [33305 35537])
+                    ("getViewInfoByVideoId" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [35583 35595])
+                            ("videoId" variable (:type "int") (reparse-symbol formal_parameters) [35597 35608]))                          
+                        :type "TbViewInfo")
+                        (reparse-symbol class_member_declaration) [35543 35693])
+                    ("updateCourseViewCount" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [35782 35794])
+                            ("videoId" variable (:type "int") (reparse-symbol formal_parameters) [35796 35807]))                          
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [35748 36014])
+                    ("getPackage" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("mapIdStr" variable (:type "String") (reparse-symbol formal_parameters) [36059 36074])
+                            ("uidStr" variable (:type "String") (reparse-symbol formal_parameters) [36076 36089])
+                            ("memStat" variable (:type "int") (reparse-symbol formal_parameters) [36091 36102])
+                            ("client" variable (:type "String") (reparse-symbol formal_parameters) [36104 36117])
+                            ("version" variable (:type "String") (reparse-symbol formal_parameters) [36119 36133]))                          
+                        :type "ListVO")
+                        (reparse-symbol class_member_declaration) [36034 40033])
+                    ("setTbcourseListDescription" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("listvo" variable (:type "ListVO") (reparse-symbol formal_parameters) [40078 40091])
+                            ("version" variable (:type "String") (reparse-symbol formal_parameters) [40092 40106])
+                            ("client" variable (:type "String") (reparse-symbol formal_parameters) [40107 40120]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [40038 42081])
+                    ("getListVO" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("mapId" variable (:type "int") (reparse-symbol formal_parameters) [42112 42121]))                          
+                        :type "ListVO")
+                        (reparse-symbol class_member_declaration) [42087 42845])
+                    ("setTbCourseListPrice" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("listVO" variable (:type "ListVO") (reparse-symbol formal_parameters) [42886 42899])
+                            ("memStat" variable (:type "int") (reparse-symbol formal_parameters) [42901 42912]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [42850 46874])
+                    ("setIsBuyOnUidCourse" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("client" variable (:type "String") (reparse-symbol formal_parameters) [46913 46927])
+                            ("listVO" variable (:type "ListVO") (reparse-symbol formal_parameters) [46929 46942])
+                            ("uid" variable (:type "int") (reparse-symbol formal_parameters) [46943 46950]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [46880 48174])
+                    ("getQuestionWithAnswerByVideoId" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [48260 48272])
+                            ("videoId" variable (:type "int") (reparse-symbol formal_parameters) [48274 48285]))                          )
+                        (reparse-symbol class_member_declaration) [48229 49764])
+                    ("getQuestionWithAnswerByVideoIdFromDB" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [49843 49855])
+                            ("videoId" variable (:type "int") (reparse-symbol formal_parameters) [49857 49868]))                          )
+                        (reparse-symbol class_member_declaration) [49806 51776])
+                    ("getVideosByCourseId" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [51844 51856]))                          )
+                        (reparse-symbol class_member_declaration) [51824 52215])
+                    ("getCourseViewCount" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [52272 52284]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [52241 52656])
+                    ("getVideoViewCount" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [52692 52704])
+                            ("videoId" variable (:type "int") (reparse-symbol formal_parameters) [52706 52717]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [52662 53387])
+                    ("getVideosVOByCourseId" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [53450 53462])
+                            ("uid" variable (:type "Integer") (reparse-symbol formal_parameters) [53464 53475])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [53477 53487])
+                            ("memStat" variable (:type "int") (reparse-symbol formal_parameters) [53489 53500]))                          )
+                        (reparse-symbol class_member_declaration) [53428 54351])
+                    ("getVideoByVideoId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [54411 54423])
+                            ("videoId" variable (:type "int") (reparse-symbol formal_parameters) [54425 54436])
+                            ("client" variable (:type "int") (reparse-symbol formal_parameters) [54438 54448]))                          
+                        :type "TbCourseVideos")
+                        (reparse-symbol class_member_declaration) [54371 54830])
+                    ("getCourseInfoByCourseId" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [54901 54913]))                          )
+                        (reparse-symbol class_member_declaration) [54877 55342])
+                    ("getCourseHisTory" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [55408 55415])
+                            ("startNum" variable (:type "int") (reparse-symbol formal_parameters) [55417 55429])
+                            ("endNum" variable (:type "int") (reparse-symbol formal_parameters) [55431 55441]))                          )
+                        (reparse-symbol class_member_declaration) [55391 55580])
+                    ("getCourseAlreadyBuy" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [55642 55649])
+                            ("state" variable (:type "int") (reparse-symbol formal_parameters) [55651 55660])
+                            ("startNum" variable (:type "int") (reparse-symbol formal_parameters) [55662 55674])
+                            ("endNum" variable (:type "int") (reparse-symbol formal_parameters) [55676 55686]))                          )
+                        (reparse-symbol class_member_declaration) [55622 56099])
+                    ("getSumPriceCourseAlreadyBuy" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [56158 56165]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [56119 56234])
+                    ("getCountCourseAlreadyBuy" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [56290 56297])
+                            ("state" variable (:type "int") (reparse-symbol formal_parameters) [56299 56308]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [56254 56385])
+                    ("getCountMemWatchCourse" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [56439 56446]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [56405 56517])
+                    ("getSumPriceMemCourse" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [56569 56576]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [56537 56642])
+                    ("getMemAfterCourse" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [56756 56763])
+                            ("endNum" variable (:type "int") (reparse-symbol formal_parameters) [56765 56775]))                          )
+                        (reparse-symbol class_member_declaration) [56738 58036])
+                    ("getAdverList" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("userType" variable (:type "int") (reparse-symbol formal_parameters) [58097 58109])
+                            ("bid" variable (:type "int") (reparse-symbol formal_parameters) [58111 58118])
+                            ("client" variable (:type "String") (reparse-symbol formal_parameters) [58120 58133]))                          )
+                        (reparse-symbol class_member_declaration) [58084 59083])
+                    ("getMemStat" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("client" variable (:type "String") (reparse-symbol formal_parameters) [59125 59138])
+                            ("v" variable (:type "String") (reparse-symbol formal_parameters) [59140 59148])
+                            ("nonce_str" variable (:type "String") (reparse-symbol formal_parameters) [59150 59166])
+                            ("timestamp" variable (:type "String") (reparse-symbol formal_parameters) [59168 59184])
+                            ("uuid" variable (:type "String") (reparse-symbol formal_parameters) [59186 59197])
+                            ("uid" variable (:type "String") (reparse-symbol formal_parameters) [59199 59209])
+                            ("key" variable (:type "String") (reparse-symbol formal_parameters) [59211 59221]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [59103 60318])
+                    ("getCourseReadHistory" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [60388 60395])
+                            ("startNum" variable (:type "int") (reparse-symbol formal_parameters) [60397 60409])
+                            ("endNum" variable (:type "int") (reparse-symbol formal_parameters) [60411 60421]))                          )
+                        (reparse-symbol class_member_declaration) [60367 60558])
+                    ("getCourseReadHistoryCount" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [60615 60622]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [60578 60730])
+                    ("getCourseReadHistorySumPrice" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "list") (reparse-symbol formal_parameters) [60812 60816]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [60750 61502])
+                    ("dealCoursePackageTitle" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("" variable (:type "userCoursePackageVOs") (reparse-symbol formal_parameters) [61572 61592]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [61508 62002])
+                    ("getCourseReadHistoryWithPackage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [62071 62078]))                          )
+                        (reparse-symbol class_member_declaration) [62039 63506])
+                    ("getCourseReadHistoryByPackageId" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [63573 63580])
+                            ("packageId" variable (:type "int") (reparse-symbol formal_parameters) [63582 63595]))                          )
+                        (reparse-symbol class_member_declaration) [63541 64423])
+                    ("batchSetUserStudyRecordsV9Image" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("" variable (:type "userStudyRecords") (reparse-symbol formal_parameters) [64497 64513]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [64429 64899])
+                    ("getUserStudyRecordsByCourseId" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("" variable (:type "userStudyRecords") (reparse-symbol formal_parameters) [64982 64998])
+                            ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [65000 65012])
+                            ("uid" variable (:type "int") (reparse-symbol formal_parameters) [65014 65021]))                          
+                        :type "UserStudyRecord")
+                        (reparse-symbol class_member_declaration) [64905 65460])
+                    ("getDetailMemBt" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("userType" variable (:type "int") (reparse-symbol formal_parameters) [65521 65533])
+                            ("bid" variable (:type "int") (reparse-symbol formal_parameters) [65535 65542])
+                            ("client" variable (:type "String") (reparse-symbol formal_parameters) [65544 65557]))                          
+                        :type "TbCourseDetailJump")
+                        (reparse-symbol class_member_declaration) [65480 65780])
+                    ("getListWen" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("userType" variable (:type "int") (reparse-symbol formal_parameters) [65837 65849])
+                            ("bid" variable (:type "int") (reparse-symbol formal_parameters) [65851 65858])
+                            ("price" variable (:type "String") (reparse-symbol formal_parameters) [65860 65872])
+                            ("client" variable (:type "String") (reparse-symbol formal_parameters) [65874 65887]))                          
+                        :type "TbCourseDetailJump")
+                        (reparse-symbol class_member_declaration) [65800 66057])
+                    ("getVipMessage" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "String") (reparse-symbol formal_parameters) [66110 66120])
+                            ("builderParameter" variable (:type "BuilderParameter") (reparse-symbol formal_parameters) [66122 66155]))                          
+                        :type "VipReturnMes")
+                        (reparse-symbol class_member_declaration) [66076 67062]))                  
+                :type "class")
+                nil [1553 67065]))          
+      :file "CourseServiceImpl.java"
+      :pointmax 67066
+      :fsize 70012
+      :lastmodtime '(22979 36473 0 0)
+      :unmatched-syntax '((GT 64979 . 64980) (IDENTIFIER 64959 . 64963) (LT 64963 . 64964) (GT 64494 . 64495) (IDENTIFIER 64474 . 64478) (LT 64478 . 64479) (GT 63539 . 63540) (PUBLIC 63512 . 63518) (LT 63523 . 63524) (GT 62037 . 62038) (COMMA 62029 . 62030) (PUBLIC 62008 . 62014) (LT 62022 . 62023) (GT 61570 . 61571) (IDENTIFIER 61544 . 61548) (LT 61548 . 61549) (GT 60810 . 60811) (IDENTIFIER 60790 . 60794) (LT 60794 . 60795) (GT 60365 . 60366) (IDENTIFIER 60324 . 60333) (PUBLIC 60338 . 60344) (LT 60349 . 60350) (GT 58082 . 58083) (IDENTIFIER 58042 . 58051) (PUBLIC 58056 . 58062) (LT 58067 . 58068) (GT 56736 . 56737) (IDENTIFIER 56649 . 56658) (PUBLIC 56716 . 56722) (LT 56727 . 56728) (GT 55620 . 55621) (IDENTIFIER 55586 . 55595) (PUBLIC 55600 . 55606) (LT 55611 . 55612) (GT 55389 . 55390) (IDENTIFIER 55348 . 55357) (PUBLIC 55362 . 55368) (LT 55373 . 55374) (GT 54875 . 54876) (COMMA 54867 . 54868) (IDENTIFIER 54836 . 54845) (PUBLIC 54850 . 54856) (LT 54860 . 54861) (GT 53426 . 53427) (IDENTIFIER 53393 . 53402) (PUBLIC 53407 . 53413) (LT 53418 . 53419) (GT 51822 . 51823) (IDENTIFIER 51782 . 51791) (PUBLIC 51796 . 51802) (LT 51807 . 51808) (GT 49804 . 49805) (PRIVATE 49770 . 49777) (LT 49782 . 49783) (GT 48227 . 48228) (IDENTIFIER 48180 . 48189) (PUBLIC 48194 . 48200) (LT 48205 . 48206) (GT 33303 . 33304) (PRIVATE 33274 . 33281) (LT 33286 . 33287) (GT 31983 . 31984) (IDENTIFIER 31941 . 31950) (PUBLIC 31955 . 31961) (LT 31966 . 31967) (GT 30278 . 30279) (IDENTIFIER 30236 . 30245) (PUBLIC 30250 . 30256) (LT 30261 . 30262) (GT 27792 . 27793) (COMMA 27784 . 27785) (IDENTIFIER 27753 . 27762) (PUBLIC 27767 . 27773) (LT 27777 . 27778) (GT 23819 . 23820) (IDENTIFIER 23798 . 23802) (LT 23802 . 23803) (GT 22830 . 22831) (IDENTIFIER 22809 . 22813) (LT 22813 . 22814) (GT 18657 . 18658) (IDENTIFIER 18615 . 18624) (PUBLIC 18629 . 18635) (LT 18640 . 18641) (GT 18315 . 18316) (IDENTIFIER 18303 . 18307) (LT 18307 . 18308) (GT 18254 . 18255) (IDENTIFIER 18216 . 18225) (PUBLIC 18230 . 18236) (LT 18241 . 18242) (GT 16913 . 16914) (IDENTIFIER 16879 . 16888) (PUBLIC 16893 . 16899) (LT 16904 . 16905) (GT 15753 . 15754) (COMMA 15745 . 15746) (IDENTIFIER 15714 . 15723) (PUBLIC 15728 . 15734) (LT 15738 . 15739) (GT 14452 . 14453) (COMMA 14444 . 14445) (PRIVATE 14426 . 14433) (LT 14437 . 14438) (GT 13782 . 13783) (COMMA 13774 . 13775) (IDENTIFIER 13743 . 13752) (PUBLIC 13757 . 13763) (LT 13767 . 13768) (GT 12567 . 12568) (IDENTIFIER 12531 . 12540) (PUBLIC 12545 . 12551) (LT 12556 . 12557) (GT 12446 . 12447) (IDENTIFIER 12409 . 12418) (PUBLIC 12423 . 12429) (LT 12434 . 12435) (GT 11496 . 11497) (IDENTIFIER 11484 . 11488) (LT 11488 . 11489) (GT 8192 . 8193) (IDENTIFIER 8180 . 8184) (LT 8184 . 8185) (GT 8154 . 8155) (PUBLIC 8130 . 8136) (LT 8141 . 8142) (GT 7870 . 7871) (IDENTIFIER 7858 . 7862) (LT 7862 . 7863) (GT 7832 . 7833) (PUBLIC 7808 . 7814) (LT 7819 . 7820) (GT 5995 . 5996) (IDENTIFIER 5960 . 5969) (PUBLIC 5974 . 5980) (LT 5985 . 5986) (GT 4125 . 4126) (IDENTIFIER 4083 . 4092) (PUBLIC 4097 . 4103) (LT 4108 . 4109) (GT 3201 . 3202) (IDENTIFIER 3189 . 3193) (LT 3193 . 3194) (GT 3157 . 3158) (PUBLIC 3140 . 3146) (LT 3151 . 3152) (IDENTIFIER 2958 . 2982) (SEMICOLON 2982 . 2983) (IDENTIFIER 2886 . 2910) (SEMICOLON 2910 . 2911) (IDENTIFIER 2825 . 2846) (SEMICOLON 2846 . 2847) (IDENTIFIER 2762 . 2782) (SEMICOLON 2782 . 2783) (IDENTIFIER 2696 . 2719) (SEMICOLON 2719 . 2720) (IDENTIFIER 2636 . 2651) (SEMICOLON 2651 . 2652) (IDENTIFIER 2575 . 2598) (SEMICOLON 2598 . 2599) (IDENTIFIER 2518 . 2530) (SEMICOLON 2530 . 2531) (IDENTIFIER 2470 . 2484) (SEMICOLON 2484 . 2485) (IDENTIFIER 2424 . 2434) (SEMICOLON 2434 . 2435) (IDENTIFIER 2372 . 2392) (SEMICOLON 2392 . 2393) (IDENTIFIER 2317 . 2330) (SEMICOLON 2330 . 2331) (IDENTIFIER 2266 . 2282) (SEMICOLON 2282 . 2283) (IDENTIFIER 2213 . 2228) (SEMICOLON 2228 . 2229) (IDENTIFIER 2164 . 2176) (SEMICOLON 2176 . 2177) (IDENTIFIER 2114 . 2130) (SEMICOLON 2130 . 2131) (IDENTIFIER 2066 . 2075) (SEMICOLON 2075 . 2076) (IDENTIFIER 2022 . 2035) (SEMICOLON 2035 . 2036) (IDENTIFIER 1973 . 1986) (SEMICOLON 1986 . 1987) (IDENTIFIER 1920 . 1937) (SEMICOLON 1937 . 1938) (IDENTIFIER 1868 . 1880) (SEMICOLON 1880 . 1881) (IDENTIFIER 1813 . 1833) (SEMICOLON 1833 . 1834) (IDENTIFIER 1736 . 1746) (IDENTIFIER 1765 . 1778) (SEMICOLON 1778 . 1779) (IDENTIFIER 1491 . 1501) (DOT 1490 . 1491) (IDENTIFIER 1480 . 1490) (DOT 1479 . 1480) (IDENTIFIER 1473 . 1479) (DOT 1472 . 1473) (IDENTIFIER 1468 . 1472) (DOT 1467 . 1468) (IMPORT 1449 . 1455) (STATIC 1456 . 1462) (IDENTIFIER 1463 . 1467) (IDENTIFIER 1439 . 1447) (DOT 1438 . 1439) (IDENTIFIER 1428 . 1438) (DOT 1427 . 1428) (IDENTIFIER 1421 . 1427) (DOT 1420 . 1421) (IDENTIFIER 1416 . 1420) (DOT 1415 . 1416) (IMPORT 1397 . 1403) (STATIC 1404 . 1410) (IDENTIFIER 1411 . 1415) (IDENTIFIER 1375 . 1395) (DOT 1374 . 1375) (IDENTIFIER 1362 . 1374) (DOT 1361 . 1362) (IDENTIFIER 1358 . 1361) (DOT 1357 . 1358) (IDENTIFIER 1349 . 1357) (DOT 1348 . 1349) (IMPORT 1331 . 1337) (STATIC 1338 . 1344) (IDENTIFIER 1345 . 1348))))
+  :file "!drive_d!gitlab!course.iciba.com!src!main!java!com!kingsoft!service!impl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

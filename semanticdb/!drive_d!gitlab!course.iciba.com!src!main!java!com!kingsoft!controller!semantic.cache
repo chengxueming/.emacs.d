@@ -1,0 +1,236 @@
+;; Object controller/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "controller/"
+  :tables
+  (list
+    (semanticdb-table "CourseController.java"
+      :major-mode 'jde-mode
+      :tags 
+        '( ("com.kingsoft.controller" package nil nil [1 33])
+            ("com.google.common.collect.Lists" include nil nil [36 75])
+            ("com.google.common.collect.Maps" include nil nil [76 114])
+            ("com.kingsoft.aop.SuperVip2017" include nil nil [115 152])
+            ("com.kingsoft.constants.Constants" include nil nil [153 193])
+            ("com.kingsoft.pojo.*" include nil nil [194 221])
+            ("com.kingsoft.pojo.TbCourseDetailJump" include nil nil [222 266])
+            ("com.kingsoft.pojo.vo.*" include nil nil [267 297])
+            ("com.kingsoft.service.*" include nil nil [298 328])
+            ("com.kingsoft.utils.*" include nil nil [329 357])
+            ("org.apache.commons.lang.StringUtils" include nil nil [360 403])
+            ("org.slf4j.Logger" include nil nil [404 428])
+            ("org.slf4j.LoggerFactory" include nil nil [429 460])
+            ("org.springframework.beans.factory.annotation.Autowired" include nil nil [461 523])
+            ("org.springframework.stereotype.Controller" include nil nil [524 573])
+            ("org.springframework.web.bind.annotation.RequestMapping" include nil nil [574 636])
+            ("org.springframework.web.bind.annotation.RequestParam" include nil nil [637 697])
+            ("org.springframework.web.bind.annotation.ResponseBody" include nil nil [698 758])
+            ("javax.servlet.http.HttpServletRequest" include nil nil [760 805])
+            ("javax.servlet.http.HttpServletResponse" include nil nil [806 852])
+            ("java.io.FileReader" include nil nil [853 879])
+            ("java.text.SimpleDateFormat" include nil nil [880 914])
+            ("java.util.*" include nil nil [915 934])
+            ("CourseController" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("vipKindSet" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1297 1448])
+                    ("LOGGER" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [1454 1539])
+                    ("getCategory" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [1630 1656]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [1604 1894])
+                    ("getCategoryV2" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [1990 2016]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [1962 2254])
+                    ("getCourseList" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [2343 2369]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [2315 3326])
+                    ("getCourseListV2" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [3436 3462]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [3406 4338])
+                    ("getPackage" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [4419 4445])
+                            ("response" variable (:type "HttpServletResponse") (reparse-symbol formal_parameters) [4447 4475]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [4394 5568])
+                    ("getPackageV2" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [5654 5680])
+                            ("response" variable (:type "HttpServletResponse") (reparse-symbol formal_parameters) [5682 5710]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [5627 5998])
+                    ("courseDetailHead" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [6134 6160])
+                            ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [6176 6188])
+                            ("uid" variable (:type "Integer") (reparse-symbol formal_parameters) [6222 6233]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [6103 10613])
+                    ("courseVideo" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [10771 10783])
+                            ("" variable (:type "uid") (reparse-symbol formal_parameters) [10807 10810])
+                            ("client" variable (:type "String") (reparse-symbol formal_parameters) [10874 10887])
+                            ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [10919 10945]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [10731 12556])
+                    ("videoDetail" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [12689 12715])
+                            ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [12761 12773])
+                            ("videoId" variable (:type "int") (reparse-symbol formal_parameters) [12819 12830])
+                            ("" variable (:type "uid") (reparse-symbol formal_parameters) [12884 12887])
+                            ("" variable (:type "client") (reparse-symbol formal_parameters) [12940 12946]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [12663 15055])
+                    ("videoViewCount" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [15160 15186])
+                            ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [15202 15214])
+                            ("videoId" variable (:type "int") (reparse-symbol formal_parameters) [15230 15241])
+                            ("" variable (:type "uid") (reparse-symbol formal_parameters) [15265 15268]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [15131 15675])
+                    ("myCourses" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [15819 15826])
+                            ("courseIds" variable (:type "String") (reparse-symbol formal_parameters) [15860 15876])
+                            ("excludedIds" variable (:type "String") (reparse-symbol formal_parameters) [15938 15956])
+                            ("client" variable (:type "String") (reparse-symbol formal_parameters) [16018 16031])
+                            ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [16033 16059]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [15781 17449])
+                    ("userCourseInfo" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol formal_parameters) [17722 17729])
+                            ("courseId" variable (:type "int") (reparse-symbol formal_parameters) [17745 17757])
+                            ("" variable (:type "client") (reparse-symbol formal_parameters) [17813 17819])
+                            ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [17821 17847]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [17679 18572])
+                    ("isBuyV2" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [18731 18757])
+                            ("response" variable (:type "HttpServletResponse") (reparse-symbol formal_parameters) [18759 18787]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [18709 19711])
+                    ("isBuy" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [19841 19867])
+                            ("response" variable (:type "HttpServletResponse") (reparse-symbol formal_parameters) [19869 19897]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [19821 21086])
+                    ("buy" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [21256 21282]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [21238 22634])
+                    ("vipCourseList" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [22733 22759]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [22705 22959])
+                    ("getHomeTabList" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [23153 23179]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [23124 24170])
+                    ("getListByLabel" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [24364 24390]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [24335 25781])
+                    ("getTabNameByLable" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [25878 25904]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [25846 26878])
+                    ("getHeadImage" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [26972 26998]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [26945 27798])
+                    ("getTeacherAndOrgDetailByClassId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [27910 27936]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [27864 28571])
+                    ("recordSet" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [28662 28688]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [28638 29770])
+                    ("activityList" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [29976 30002])
+                            ("response" variable (:type "HttpServletResponse") (reparse-symbol formal_parameters) [30004 30032]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [29949 30804])
+                    ("pcCategory" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "client") (reparse-symbol formal_parameters) [30911 30917])
+                            ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [30919 30945]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [30865 32751])
+                    ("alreadtWatchMem" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [32983 33009])
+                            ("response" variable (:type "HttpServletResponse") (reparse-symbol formal_parameters) [33011 33039]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [32953 37302])
+                    ("getUserPackage" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [37498 37524])
+                            ("response" variable (:type "HttpServletResponse") (reparse-symbol formal_parameters) [37526 37554]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [37469 38207]))                  
+                :type "class")
+                nil [993 38209]))          
+      :file "CourseController.java"
+      :pointmax 38210
+      :fsize 40389
+      :lastmodtime '(22980 29204 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_d!gitlab!course.iciba.com!src!main!java!com!kingsoft!controller!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

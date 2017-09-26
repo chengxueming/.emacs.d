@@ -1,0 +1,37 @@
+;; Object words/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "words/"
+  :tables
+  (list
+    (semanticdb-table "WordDataProcessing.java"
+      :major-mode 'jde-mode
+      :tags 
+        '( ("com.kingsoft.ciba.words" package nil nil [1 33])
+            ("com.kingsoft.ciba.epub.util.FileIO" include nil nil [35 77])
+            ("java.io.File" include nil nil [79 99])
+            ("java.util.ArrayList" include nil nil [100 127])
+            ("java.util.LinkedList" include nil nil [128 156])
+            ("java.util.List" include nil nil [157 179])
+            ("java.util.Map" include nil nil [180 201])
+            ("WordDataProcessing" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("getData" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol formal_parameters) [317 322])
+                            ("mapJson" variable (:type "Map") (reparse-symbol formal_parameters) [324 335])
+                            ("listAll" variable (:type "List") (reparse-symbol formal_parameters) [336 348])
+                            ("linkedListResultPart" variable (:type "List") (reparse-symbol formal_parameters) [350 375]))                          
+                        :type "List")
+                        (reparse-symbol class_member_declaration) [290 3099]))                  
+                :type "class")
+                nil [252 3101]))          
+      :file "WordDataProcessing.java"
+      :pointmax 3102
+      :fsize 3293
+      :lastmodtime '(22878 2295 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_d!SVN!epub-java!src!main!java!com!kingsoft!ciba!words!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,149 @@
+;; Object controller/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "controller/"
+  :tables
+  (list
+    (semanticdb-table "PocketYueduController.java"
+      :major-mode 'jde-mode
+      :tags 
+        '( ("com.kingsoft.controller" package nil nil [1 33])
+            ("com.fasterxml.jackson.databind.ObjectMapper" include nil nil [35 86])
+            ("com.kingsoft.constant.Constants" include nil nil [87 126])
+            ("com.kingsoft.constant.WeiXinConstant" include nil nil [127 171])
+            ("com.kingsoft.exceptions.CustomException" include nil nil [172 219])
+            ("com.kingsoft.pojo.vo.*" include nil nil [220 250])
+            ("com.kingsoft.service.IPocketYueduService" include nil nil [251 299])
+            ("com.kingsoft.service.impl.RedisService" include nil nil [300 346])
+            ("com.kingsoft.utils.*" include nil nil [347 375])
+            ("com.ksyun.ks3.utils.RequestUtils" include nil nil [376 416])
+            ("org.apache.commons.lang.StringUtils" include nil nil [417 460])
+            ("org.apache.log4j.Logger" include nil nil [461 492])
+            ("org.springframework.beans.factory.annotation.Autowired" include nil nil [493 555])
+            ("org.springframework.stereotype.Controller" include nil nil [556 605])
+            ("org.springframework.web.bind.annotation.RequestMapping" include nil nil [606 668])
+            ("org.springframework.web.bind.annotation.RequestMethod" include nil nil [669 730])
+            ("org.springframework.web.bind.annotation.RequestParam" include nil nil [731 791])
+            ("org.springframework.web.bind.annotation.ResponseBody" include nil nil [792 852])
+            ("org.springframework.web.servlet.ModelAndView" include nil nil [853 905])
+            ("javax.servlet.http.Cookie" include nil nil [907 940])
+            ("javax.servlet.http.HttpServletRequest" include nil nil [941 986])
+            ("javax.servlet.http.HttpServletResponse" include nil nil [987 1033])
+            ("java.net.URLDecoder" include nil nil [1035 1062])
+            ("java.net.URLEncoder" include nil nil [1063 1090])
+            ("java.util.*" include nil nil [1091 1110])
+            ("PocketYueduController" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("objectMapper" variable
+                       (:typemodifiers ("public" "final")
+                        :type "ObjectMapper")
+                        (reparse-symbol class_member_declaration) [1247 1307])
+                    ("LOGGER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [1312 1394])
+                    ("goodBookIndex" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [1590 1616]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [1561 2327])
+                    ("goodChapterContent" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [2424 2450])
+                            ("chapterId" variable (:type "int") (reparse-symbol formal_parameters) [2503 2516]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [2390 2832])
+                    ("getUserResult" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [2923 2949])
+                            ("chapterId" variable (:type "int") (reparse-symbol formal_parameters) [3002 3015]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [2894 3970])
+                    ("getChapterWords" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [4062 4088])
+                            ("chapterId" variable (:type "int") (reparse-symbol formal_parameters) [4141 4154]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [4031 4345])
+                    ("getChapterSentence" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [4444 4470])
+                            ("chapterId" variable (:type "int") (reparse-symbol formal_parameters) [4523 4536]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [4410 4737])
+                    ("getCurrentGoodInfo" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [4828 4854]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [4794 5624])
+                    ("getUserReadInfo" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [5716 5742]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [5685 6266])
+                    ("getOpenId" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [6430 6456])
+                            ("response" variable (:type "HttpServletResponse") (reparse-symbol formal_parameters) [6458 6486]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [6406 8656])
+                    ("recordMessageTemplate" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("openId" variable (:type "String") (reparse-symbol formal_parameters) [8759 8772])
+                            ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [8774 8800]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8724 9136])
+                    ("isBuy" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [9251 9277])
+                            ("response" variable (:type "HttpServletResponse") (reparse-symbol formal_parameters) [9279 9307]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [9231 9558])
+                    ("getWordMean" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [9678 9704]))                          
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [9652 10275])
+                    ("getWxInfo" function
+                       (:constructor-flag t
+                        :throws ("Exception")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [10321 10347])
+                            ("code" variable (:type "String") (reparse-symbol formal_parameters) [10349 10360]))                          )
+                        (reparse-symbol class_member_declaration) [10311 10913])
+                    ("getUserWxInfo" function
+                       (:constructor-flag t
+                        :throws ("Exception")
+                        :arguments 
+                          ( ("openId" variable (:type "String") (reparse-symbol formal_parameters) [10962 10975])
+                            ("accessTocken" variable (:type "String") (reparse-symbol formal_parameters) [10977 10996]))                          )
+                        (reparse-symbol class_member_declaration) [10948 11411])
+                    ("getOpenId" function
+                       (:throws ("CustomException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [11442 11468]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [11417 11808]))                  
+                :type "class")
+                nil [1206 11812]))          
+      :file "PocketYueduController.java"
+      :pointmax 11813
+      :fsize 12101
+      :lastmodtime '(22980 34643 0 0)
+      :unmatched-syntax '((GT 10946 . 10947) (COMMA 10938 . 10939) (PRIVATE 10919 . 10926) (LT 10931 . 10932) (GT 10309 . 10310) (COMMA 10301 . 10302) (PRIVATE 10282 . 10289) (LT 10294 . 10295) (EQ 9627 . 9628) (COMMA 9618 . 9619) (STRING_LITERAL 9606 . 9618) (IDENTIFIER 9598 . 9603) (EQ 9604 . 9605) (EQ 9206 . 9207) (COMMA 9197 . 9198) (STRING_LITERAL 9184 . 9197) (IDENTIFIER 9176 . 9181) (EQ 9182 . 9183) (EQ 6381 . 6382) (COMMA 6372 . 6373) (STRING_LITERAL 6365 . 6372) (IDENTIFIER 6357 . 6362) (EQ 6363 . 6364) (STRING_LITERAL 5664 . 5679) (STRING_LITERAL 4777 . 4788) (IDENTIFIER 4472 . 4485) (PAREN_BLOCK 4485 . 4522) (STRING_LITERAL 4386 . 4404) (IDENTIFIER 4090 . 4103) (PAREN_BLOCK 4103 . 4140) (STRING_LITERAL 4010 . 4025) (IDENTIFIER 2951 . 2964) (PAREN_BLOCK 2964 . 3001) (STRING_LITERAL 2872 . 2888) (IDENTIFIER 2452 . 2465) (PAREN_BLOCK 2465 . 2502) (STRING_LITERAL 2367 . 2384) (STRING_LITERAL 1543 . 1555) (IDENTIFIER 1489 . 1502) (SEMICOLON 1502 . 1503) (IDENTIFIER 1400 . 1410) (IDENTIFIER 1435 . 1453) (SEMICOLON 1453 . 1454) (PAREN_BLOCK 1188 . 1205) (IDENTIFIER 1173 . 1188) (IDENTIFIER 1161 . 1172))))
+  :file "!drive_d!service.iciba.com_task!src!main!java!com!kingsoft!controller!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

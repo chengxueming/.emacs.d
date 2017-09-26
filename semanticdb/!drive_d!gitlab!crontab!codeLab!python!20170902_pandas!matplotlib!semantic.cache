@@ -1,0 +1,29 @@
+;; Object matplotlib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "matplotlib/"
+  :tables
+  (list
+    (semanticdb-table "test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("matplotlib.pyplot" include nil nil [1 32])
+            ("numpy.random" include nil nil [33 63])
+            ("numpy" include nil nil [64 82])
+            ("time" include nil nil [83 94])
+            ("fig" variable nil nil [95 113])
+            ("ax1" variable nil nil [114 144])
+            ("ax2" variable nil nil [145 175])
+            ("ax3" variable nil nil [176 206])
+            ("axes" code nil nil [238 293])
+            ("axes" code nil nil [294 334])
+            ("axes" code nil nil [335 396])
+            ("plt" code nil nil [614 653])
+            ("fig" code nil nil [672 682]))          
+      :file "test.py"
+      :pointmax 699
+      :fsize 720
+      :lastmodtime '(22985 62445 0 0)
+      :unmatched-syntax nil))
+  :file "!drive_d!gitlab!crontab!codeLab!python!20170902_pandas!matplotlib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
