@@ -19,6 +19,20 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
+;; auto-complete begin
+(add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-20170124.1845/")
+(add-to-list 'load-path "~/.emacs.d/elpa/popup-20160709.729/")
+(require 'popup)
+(require 'auto-complete-config)
+;; change the path to where your dict fold locates,
+;; and note that the trailing '/' must present.
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20170124.1845/dict/")
+(ac-config-default)
+(setq ac-auto-start t)
+(setq ac-quick-help-delay 0.5)
+(define-key ac-mode-map  [(control tab)] 'auto-complete)
+;; auto-complete end
 ;;program mode begin
   ;; jdee-mode
  (add-to-list 'load-path "~/.emacs.d/jdee-2.4.1/lisp")  
@@ -26,6 +40,34 @@
  ;; php-mode
   (autoload 'php-mode "php-mode" "PHP editing mode." t)
 (setq auto-mode-alist (cons '("\\.php$" . php-mode) auto-mode-alist))
+;; http://blog.gabrielsaldana.org/php-syntax-check-as-you-type-with-emacs/
+;; Flymake PHP Extension
+(require 'flymake)
+(unless (fboundp 'flymake-php-init)
+  (defun flymake-php-init ()
+    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-inplace))
+           (local-file (file-relative-name
+                        temp-file
+                        (file-name-directory buffer-file-name))))
+      (list "php" (list "-f" local-file "-l")))))
+(let ((php-ext-re "\\.php[345]?\\'")
+      (php-error-re
+       "\\(?:Parse\\|Fatal\\) error: \\(.*\\) in \\(.*\\) on line \\([0-9]+\\)"))
+  (unless (assoc php-ext-re flymake-allowed-file-name-masks)
+    (add-to-list 'flymake-allowed-file-name-masks
+                 (list php-ext-re
+                       'flymake-php-init
+                       'flymake-simple-cleanup
+                       'flymake-get-real-file-name))
+    (add-to-list 'compilation-error-regexp-alist-alist
+                 (list 'compilation-php
+                       php-error-re  2 3 nil nil))
+    (add-to-list 'compilation-error-regexp-alist 'compilation-php)
+    (add-to-list 'flymake-err-line-patterns
+                 (list php-error-re 2 3 nil 1))))
+;; add php flymake support
+(add-hook 'php-mode-hook (lambda () (flymake-mode t)))
 ;; auto-indent
 (add-hook 'php-mode-hook
 (lambda ()
