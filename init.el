@@ -33,6 +33,9 @@
 (setq ac-quick-help-delay 0.5)
 (define-key ac-mode-map  [(control tab)] 'auto-complete)
 ;; auto-complete end
+;; magit begin
+(global-set-key (kbd "C-x g") 'magit-status)
+;; magit end
 ;;program mode begin
   ;; jdee-mode
  (add-to-list 'load-path "~/.emacs.d/jdee-2.4.1/lisp")  

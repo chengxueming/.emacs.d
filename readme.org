@@ -10,3 +10,12 @@ if you want to use ~/.emacs.d/init.el please add code to ~/.emacs
   )
 )
 #+END_SRC
+* melpa dependency
+** php-mode https://github.com/ejmr/php-mode
+** jdee https://github.com/jdee-emacs/jdee
+** ac-php https://github.com/xcwen/ac-php
+** auto-complete https://github.com/auto-complete/auto-complete
+** neotree https://github.com/jaypei/emacs-neotree
+** all-the-icons(not work well) https://github.com/domtronn/all-the-icons.el
+** multiple-cursors https://github.com/magnars/multiple-cursors.el
+** magit https://github.com/magit/magit
