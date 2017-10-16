@@ -19,3 +19,10 @@ if you want to use ~/.emacs.d/init.el please add code to ~/.emacs
 *** all-the-icons(not work well) https://github.com/domtronn/all-the-icons.el
 *** multiple-cursors https://github.com/magnars/multiple-cursors.el
 *** magit https://github.com/magit/magit
+*** elpy https://github.com/jorgenschaefer/elpy 跳转到定义 显示用法 列出函数列表 操作行
+*** flycheck https://github.com/flycheck/flycheck ?
+*** company-jedi https://github.com/syohex/emacs-company-jedi ?
+*** virtualenvwrapper https://github.com/porterjamesj/virtualenvwrapper.el ?
+*** iedit https://github.com/tsdh/iedit
+*** web-mode https://github.com/fxbois/web-mode js高亮 操作标签
+*** find-file-in-project(not work well) https://github.com/technomancy/find-file-in-project

@@ -32,6 +32,7 @@
 (setq ac-auto-start t)
 (setq ac-quick-help-delay 0.5)
 (define-key ac-mode-map  [(control tab)] 'auto-complete)
+(add-to-list 'ac-modes 'jde-mode)
 ;; auto-complete end
 ;; magit begin
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -39,7 +40,28 @@
 ;;program mode begin
   ;; jdee-mode
  (add-to-list 'load-path "~/.emacs.d/jdee-2.4.1/lisp")  
- (load "jde")
+(load "jde")
+(custom-set-variables
+  '(jdee-server-dir "~/.emacs.d/myJars")
+  )
+    ;;jde completion with ido and yasnippet
+(defun jde-complete-ido ()
+  "Custom method completion for JDE using ido-mode and yasnippet."
+  (interactive)
+  (let ((completion-list '()) (variable-at-point (jde-parse-java-variable-at-point)))
+    (dolist (element (jde-complete-find-completion-for-pair variable-at-point nil) nil)
+      (add-to-list 'completion-list (cdr element)))
+    (if completion-list
+        (let ((choise (ido-completing-read "> " completion-list nil nil (car (cdr variable-at-point)))) (method))
+          (unless (string-match "^.*()$" choise)
+            (setq method (replace-regexp-in-string ")" "})"(replace-regexp-in-string ", " "}, ${" (replace-regexp-in-string "(" "(${" choise)))))
+          (delete-region (point) (re-search-backward "\\." (line-beginning-position)))
+          (insert ".")
+          (if method
+              (yas/expand-snippet  method)
+            (insert choise)))
+      (message "No completions at this point"))))
+(add-hook 'jde-mode-hook 'jde-complete-ido)
  ;; php-mode
   (autoload 'php-mode "php-mode" "PHP editing mode." t)
 (setq auto-mode-alist (cons '("\\.php$" . php-mode) auto-mode-alist))
@@ -76,9 +98,36 @@
 (lambda ()
 (local-set-key [?\C-p] (lambda () (interactive) (previous-line) (indent-according-to-mode)))
 (local-set-key [?\C-n] (lambda () (interactive) (next-line) (indent-according-to-mode)))))
+;; python mode
+(package-initialize)
+(elpy-enable)
+;; pep8 code style
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+(setq python-shell-interpreter "ipython3"
+     python-shell-interpreter-args "-i")
+;; enable elpy jedi backend
+(setq elpy-rpc-backend "jedi")
+;; Fixing a key binding bug in elpy
+(define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
+;; Fixing another key binding bug in iedit mode
+(define-key global-map (kbd "C-c o") 'iedit-mode)
+;; web mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 ;;program mode end
-  (load-theme 'leuven t)
+;; find-file-in-project
+ (if (eq system-type 'windows-nt)
+    (setq ffip-find-executable "c:\\\\Windows\\\\System32\\\\find"))
 
+  (load-theme 'leuven t)
   ;;(send-mail-function (quote smtpmail-send-it))
  ;; (smtp mail-smtp-server "smtp.qq.com")
  ;; (smtp mail-smtp-service 25)
@@ -86,7 +135,7 @@
  (setq user-mail-address "2694149918@qq.com")
  (setq-default tab-width 4)
  (setq-default indent-tabs-mode)
- 
+
 ;;(put 'upcase-region 'disabled nil)
 (set-default-font "-outline-Axure Handwriting-bold-normal-normal-sans-21-*-*-*-p-*-iso8859-1")
-      (define-key global-map [C-return] 'set-mark-command)
+      (define-key global-map [C-@] 'set-mark-command)
